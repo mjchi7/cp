@@ -55,14 +55,15 @@ For more information about this issue, refers to this [link](https://askubuntu.c
 
 2. Adding the required codes as in official documents
 
-3. Remember to tell virtualenv to read up the new path
+3. Remember to tell virtualenv to read up the new path for our setting
+`export PYTHONPATH="/home/superset/superset_setting`
 
  
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTA2ODY4MzgsMTUwODY0ODU5NywtMT
+eyJoaXN0b3J5IjpbLTE2NTE2NzMyNDIsMTUwODY0ODU5NywtMT
 MxMDkxMDI1MywxODU0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4
 OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1MjJdfQ==
 -->
