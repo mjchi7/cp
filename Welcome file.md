@@ -47,10 +47,12 @@ For more information about this issue, refers to this [link](https://askubuntu.c
 
 9. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
 
+ 
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NTE0OTA2MywxODU0NzkwNjU4LC05MD
-A0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1
-MjJdfQ==
+eyJoaXN0b3J5IjpbLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOT
+AwNDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUz
+NTIyXX0=
 -->
