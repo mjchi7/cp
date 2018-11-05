@@ -29,7 +29,9 @@ For more information refers to this [link](https://stackoverflow.com/questions/4
 4. Create an admin user for superset. You will be prompted to set *username*, *first* and *last* name and finally, a *password*.
 `fabmanager create-admin --app superset`
 
-*Note: If the server complains about **unsupported UTF-8 locale issue**,  *
+*Note: If the server complains about **unsupported UTF-8 locale issue**, simply enter the following command*
+`export LC_ALL="en_US.UTF-8"` and try again. 
+For more information about this issue, refers to this [link](https://askubuntu.com/questions/162391/how-do-i-fix-my-locale-issue).
 
 5. Initialize the database
 `superset db upgrade`
@@ -48,7 +50,7 @@ For more information refers to this [link](https://stackoverflow.com/questions/4
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjcxNzYzMDksMTg1NDc5MDY1OCwtOT
-AwNDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUz
-NTIyXX0=
+eyJoaXN0b3J5IjpbLTg2NTE0OTA2MywxODU0NzkwNjU4LC05MD
+A0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1
+MjJdfQ==
 -->
