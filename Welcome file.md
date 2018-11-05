@@ -16,6 +16,8 @@ While still in the virtual environment, do the following:
 `sudo apt-get install libsasl2-dev` for Ubuntu
 `sudo yum install cyrus-sasl-devel` for AWS EC2/EMR or **CentOS** 
 
+For more information refers to this [link](https://stackoverflow.com/questions/48562383/sasl-saslwrapper-h2223-fatal-error-sasl-sasl-h-no-such-file-or-directory).
+
 1. Firstly, as suggested by the official installation guide, always upgrade `pip` and `setuptools` to avoid any unforeseen circumstances.
 `pip install --upgrade setuptools pip`
 
@@ -44,6 +46,6 @@ superset runserver -d
 3. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMTA1MTA4LC05MDA0MDA0NzQsLTIzNj
-k4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1MjJdfQ==
+eyJoaXN0b3J5IjpbMTg1NDc5MDY1OCwtOTAwNDAwNDc0LC0yMz
+Y5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX0=
 -->
