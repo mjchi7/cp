@@ -61,9 +61,7 @@ For more information about this issue, refers to this [link](https://askubuntu.c
 4. Since the OAuth2 of *OriginSSO* doesn't support HTTPS, `flask-builder` will complains about this stating that it is not secure. To temporary allow this to happen, in the `superset_config.py`, add in the following code
 ```python
 import os
-os.environ['```
-OAUTHLIB_INSECURE_TRANSPORT
-
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 ```
 
  
@@ -71,7 +69,7 @@ OAUTHLIB_INSECURE_TRANSPORT
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NjcwODczMywtMTY1MTY3MzI0MiwxNT
+eyJoaXN0b3J5IjpbMTg2MTg3NzE2OSwtMTY1MTY3MzI0MiwxNT
 A4NjQ4NTk3LC0xMzEwOTEwMjUzLDE4NTQ3OTA2NTgsLTkwMDQw
 MDQ3NCwtMjM2OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1MzUyMl
 19
