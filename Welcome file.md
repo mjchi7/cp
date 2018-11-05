@@ -27,8 +27,9 @@ For more information refers to this [link](https://stackoverflow.com/questions/4
 `pip install superset`
 
 4. Create an admin user for superset. You will be prompted to set *username*, *first* and *last* name and finally, a *password*.
-
 `fabmanager create-admin --app superset`
+
+*Note: If the server complains about **unsupported UTF-8 locale issue**,  *
 
 5. Initialize the database
 `superset db upgrade`
@@ -37,18 +38,17 @@ For more information refers to this [link](https://stackoverflow.com/questions/4
 `superset load_examples`
 
 7. Create default role and permission
-`superset init
+`superset init`
 
-# To start a development web server on port 8088. Use -p to bind to another port.
-superset runserver -d
-```
+8. To start a development web server on port 8088. Use -p to bind to another port.
+`superset runserver -d`
 
-3. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
+9. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc1OTA4MjkyLDE4NTQ3OTA2NTgsLTkwMD
-QwMDQ3NCwtMjM2OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1MzUy
-Ml19
+eyJoaXN0b3J5IjpbLTE3NjcxNzYzMDksMTg1NDc5MDY1OCwtOT
+AwNDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUz
+NTIyXX0=
 -->
