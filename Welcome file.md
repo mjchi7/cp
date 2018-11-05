@@ -68,10 +68,11 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 
 # 4. Unsolved issues
-1. How do we enable two way of authentication? This issue is mainly the problem wit
+1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
+2. At the OAuth2 provider side, admin needs to register the superset application's port number at AITSP so that user can be redirected after they have successfully id
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTA2ODYxNzUsMzk2MjUwOTk5LDE4Nj
-E4NzcxNjksLTE2NTE2NzMyNDIsMTUwODY0ODU5NywtMTMxMDkx
-MDI1MywxODU0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NS
-wyMTE2ODE3NDQ4LC05MDgyNTM1MjJdfQ==
+eyJoaXN0b3J5IjpbMTQ4MTY1NjU4NSwzOTYyNTA5OTksMTg2MT
+g3NzE2OSwtMTY1MTY3MzI0MiwxNTA4NjQ4NTk3LC0xMzEwOTEw
+MjUzLDE4NTQ3OTA2NTgsLTkwMDQwMDQ3NCwtMjM2OTg5ODk1LD
+IxMTY4MTc0NDgsLTkwODI1MzUyMl19
 -->
