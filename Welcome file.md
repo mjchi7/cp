@@ -9,9 +9,11 @@ and ensure that `virtualenvwrapper` is present in the list.
 `(superset) [superset@AITSP ~]$`
 
 # 2. Install superset
+While still in the virtual environment, do the following:
+
 1. As suggested by the official installation guide, always upgrade `pip` and `setuptools` to avoid any unforeseen circumstances.
 `pip install --upgrade setuptools pip`
-
+2. Install the superset 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMjExMzQ4NSwtOTA4MjUzNTIyXX0=
+eyJoaXN0b3J5IjpbMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX0=
 -->
