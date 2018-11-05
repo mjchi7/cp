@@ -53,12 +53,16 @@ For more information about this issue, refers to this [link](https://askubuntu.c
 1. Install required modules:
 `pip install flask-oauthlib`
 
+2. Adding the required codes as in official documents
+
+3. Remember to tell virtualenv to read up the new path
+
  
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwODY0ODU5NywtMTMxMDkxMDI1MywxOD
-U0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3
-NDQ4LC05MDgyNTM1MjJdfQ==
+eyJoaXN0b3J5IjpbLTE4MTA2ODY4MzgsMTUwODY0ODU5NywtMT
+MxMDkxMDI1MywxODU0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4
+OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1MjJdfQ==
 -->
