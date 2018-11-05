@@ -58,12 +58,21 @@ For more information about this issue, refers to this [link](https://askubuntu.c
 3. Remember to tell virtualenv to read up the new path for our setting
 `export PYTHONPATH="/home/superset/superset_setting`
 
+4. Since the OAuth2 of *OriginSSO* doesn't support HTTPS, `flask-builder` will complains about this stating that it is not secure. To temporary allow this to happen, in the `superset_config.py`, add in the following code
+```python
+import os
+os.environ['```
+OAUTHLIB_INSECURE_TRANSPORT
+
+```
+
  
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTE2NzMyNDIsMTUwODY0ODU5NywtMT
-MxMDkxMDI1MywxODU0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4
-OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1MjJdfQ==
+eyJoaXN0b3J5IjpbMTY3NjcwODczMywtMTY1MTY3MzI0MiwxNT
+A4NjQ4NTk3LC0xMzEwOTEwMjUzLDE4NTQ3OTA2NTgsLTkwMDQw
+MDQ3NCwtMjM2OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1MzUyMl
+19
 -->
