@@ -36,7 +36,9 @@ superset init
 superset runserver -d
 ```
 
+3. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NTI5NDM0MywyMTE2ODE3NDQ4LC05MD
+eyJoaXN0b3J5IjpbLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MD
 gyNTM1MjJdfQ==
 -->
