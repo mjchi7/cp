@@ -13,6 +13,8 @@ While still in the virtual environment, do the following:
 
 1. As suggested by the official installation guide, always upgrade `pip` and `setuptools` to avoid any unforeseen circumstances.
 `pip install --upgrade setuptools pip`
+
+2. After preliminaries are done, do the following steps to install and initialize superset on the server (copied from the official installation guide)
 ```python
 # Install superset
 pip install superset
@@ -25,9 +27,16 @@ fabmanager create-admin --app superset
 superset db upgrade
 
 # Load some data to play with
+superset load_examples
 
+# Create default roles and permissions
+superset init
+
+# To start a development web server on port 8088. Use -p to bind to another port.
+superset runserver -d
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkwMDI2MzQ5LDIxMTY4MTc0NDgsLTkwOD
-I1MzUyMl19
+eyJoaXN0b3J5IjpbMjA1NTI5NDM0MywyMTE2ODE3NDQ4LC05MD
+gyNTM1MjJdfQ==
 -->
