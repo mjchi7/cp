@@ -22,22 +22,22 @@ For more information refers to this [link](https://stackoverflow.com/questions/4
 `pip install --upgrade setuptools pip`
 
 2. After preliminaries are done, do the following steps to install and initialize superset on the server (copied from the official installation guide)
-```python
-# Install superset
-pip install superset
 
-# Create an admin user (you will be prompted to set username, first and last name and
-# finally, a password)
-fabmanager create-admin --app superset
+3. Installing superset
+`pip install superset`
 
-# Initialize the database
-superset db upgrade
+4. Create an admin user for superset. You will be prompted to set *username*, *first* and *last* name and finally, a *password*.
 
-# Load some data to play with
-superset load_examples
+`fabmanager create-admin --app superset`
 
-# Create default roles and permissions
-superset init
+5. Initialize the database
+`superset db upgrade`
+
+6. Load some sample data to play with
+`superset load_examples`
+
+7. Create default role and permission
+`superset init
 
 # To start a development web server on port 8088. Use -p to bind to another port.
 superset runserver -d
@@ -48,7 +48,7 @@ superset runserver -d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTIyNzA0MiwxODU0NzkwNjU4LC05MD
-A0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1
-MjJdfQ==
+eyJoaXN0b3J5IjpbOTc1OTA4MjkyLDE4NTQ3OTA2NTgsLTkwMD
+QwMDQ3NCwtMjM2OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1MzUy
+Ml19
 -->
