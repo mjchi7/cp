@@ -11,17 +11,15 @@ and ensure that `virtualenvwrapper` is present in the list.
 # 2. Install superset
 While still in the virtual environment, do the following:
 
-0. This step is not documented in superset official installation guide, but ensure the following package is already in the server in order for the following steps to work:
+0. *This step is not documented in superset official installation guide*, but please ensure the following package is already installed in order for the following steps to work:
 
 `sudo apt-get install libsasl2-dev` for Ubuntu
 `sudo yum install cyrus-sasl-devel` for AWS EC2/EMR or **CentOS** 
 
-2. When the required
-
-3. As suggested by the official installation guide, always upgrade `pip` and `setuptools` to avoid any unforeseen circumstances.
+1. Firstly, as suggested by the official installation guide, always upgrade `pip` and `setuptools` to avoid any unforeseen circumstances.
 `pip install --upgrade setuptools pip`
 
-4. After preliminaries are done, do the following steps to install and initialize superset on the server (copied from the official installation guide)
+2. After preliminaries are done, do the following steps to install and initialize superset on the server (copied from the official installation guide)
 ```python
 # Install superset
 pip install superset
@@ -46,6 +44,6 @@ superset runserver -d
 3. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzEwNTMxMCwtOTAwNDAwNDc0LC0yMz
-Y5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX0=
+eyJoaXN0b3J5IjpbMTQxMTA1MTA4LC05MDA0MDA0NzQsLTIzNj
+k4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1MjJdfQ==
 -->
