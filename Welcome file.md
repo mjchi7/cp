@@ -55,22 +55,23 @@ For more information about this issue, refers to this [link](https://askubuntu.c
 
 2. Adding the required codes as stated in official document [Custom OAuth2 configuration](https://superset.incubator.apache.org/installation.html#custom-oauth2-configuration)
 
-3. Remember to tell virtualenv to read up the new path for our setting by adding the following line into 
-`export PYTHONPATH="/home/superset/superset_setting` where `superset_setting` should contains the setting files you created after going through step 2 (`superset_config.py` and `custom_sso_security_manager.py`)
-
-4. Since the OAuth2 of *OriginSSO* doesn't support HTTPS, `flask-builder` will complains about this stating that it is not secure. To temporary allow this to happen, in the `superset_config.py`, add in the following code
+3. Since the OAuth2 of *OriginSSO* doesn't support HTTPS, `flask-builder` will complains about this stating that it is not secure. To temporary allow this to happen, in the `superset_config.py`, add in the following code
 ```python
 import os
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 ```
 
+4. Remember to tell virtualenv to read up the new path for our setting by adding the following line into 
+`export PYTHONPATH="/home/superset/superset_setting` where `superset_setting` should contains the setting files you created after going through step 2 (`superset_config.py` and `custom_sso_security_manager.py`)
+
  
 
 
-
+# 4. Unsolved issues
+1. How do we enable two way of authentication? This issue is mainly the problem wit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1Nzg5MjM4MSwzOTYyNTA5OTksMTg2MT
-g3NzE2OSwtMTY1MTY3MzI0MiwxNTA4NjQ4NTk3LC0xMzEwOTEw
-MjUzLDE4NTQ3OTA2NTgsLTkwMDQwMDQ3NCwtMjM2OTg5ODk1LD
-IxMTY4MTc0NDgsLTkwODI1MzUyMl19
+eyJoaXN0b3J5IjpbLTE3OTA2ODYxNzUsMzk2MjUwOTk5LDE4Nj
+E4NzcxNjksLTE2NTE2NzMyNDIsMTUwODY0ODU5NywtMTMxMDkx
+MDI1MywxODU0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NS
+wyMTE2ODE3NDQ4LC05MDgyNTM1MjJdfQ==
 -->
