@@ -47,12 +47,18 @@ For more information about this issue, refers to this [link](https://askubuntu.c
 
 9. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
 
+
+# 3. Configuring OAuth2 
+
+1. Install required modules:
+`pip install flask-oauthlib`
+
  
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOT
-AwNDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUz
-NTIyXX0=
+eyJoaXN0b3J5IjpbMTUwODY0ODU5NywtMTMxMDkxMDI1MywxOD
+U0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3
+NDQ4LC05MDgyNTM1MjJdfQ==
 -->
