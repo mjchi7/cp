@@ -11,6 +11,8 @@ and ensure that `virtualenvwrapper` is present in the list.
 # 2. Install superset
 While still in the virtual environment, do the following:
 
+0. This step is not documented in superset official installation guide, but 
+
 1. As suggested by the official installation guide, always upgrade `pip` and `setuptools` to avoid any unforeseen circumstances.
 `pip install --upgrade setuptools pip`
 
@@ -39,6 +41,6 @@ superset runserver -d
 3. After installation, head to [http://localhost:8088](http://localhost:8088) and login using the credentials entered while creating the admin account. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MD
-gyNTM1MjJdfQ==
+eyJoaXN0b3J5IjpbLTkwMDQwMDQ3NCwtMjM2OTg5ODk1LDIxMT
+Y4MTc0NDgsLTkwODI1MzUyMl19
 -->
