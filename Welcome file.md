@@ -13,7 +13,21 @@ While still in the virtual environment, do the following:
 
 1. As suggested by the official installation guide, always upgrade `pip` and `setuptools` to avoid any unforeseen circumstances.
 `pip install --upgrade setuptools pip`
-2. Install the superset 
+```python
+# Install superset
+pip install superset
+
+# Create an admin user (you will be prompted to set username, first and last name and
+# finally, a password)
+fabmanager create-admin --app superset
+
+# Initialize the database
+superset db upgrade
+
+# Load some data to play with
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX0=
+eyJoaXN0b3J5IjpbMjkwMDI2MzQ5LDIxMTY4MTc0NDgsLTkwOD
+I1MzUyMl19
 -->
