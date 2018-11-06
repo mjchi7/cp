@@ -64,6 +64,7 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 4. Remember to tell virtualenv to read up the new path for our setting by adding the following line into 
 `export PYTHONPATH="/home/superset/superset_setting` where `superset_setting` should contains the setting files you created after going through step 2 (`superset_config.py` and `custom_sso_security_manager.py`)
 
+5. In the official documentations, the custom 
  
 
 
@@ -73,8 +74,9 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNjgxNTU1MywxNTI5Njk2MDgxLDM5Nj
-I1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLDE1MDg2NDg1
-OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAwNDAwNDc0LC
-0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX0=
+eyJoaXN0b3J5IjpbMTQ1MjE2OTE0MCwxNzE2ODE1NTUzLDE1Mj
+k2OTYwODEsMzk2MjUwOTk5LDE4NjE4NzcxNjksLTE2NTE2NzMy
+NDIsMTUwODY0ODU5NywtMTMxMDkxMDI1MywxODU0NzkwNjU4LC
+05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgy
+NTM1MjJdfQ==
 -->
