@@ -64,7 +64,23 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 4. Remember to tell virtualenv to read up the new path for our setting by adding the following line into 
 `export PYTHONPATH="/home/superset/superset_setting` where `superset_setting` should contains the setting files you created after going through step 2 (`superset_config.py` and `custom_sso_security_manager.py`)
 
-5. In the official documentations, the custom 
+5. In the official documentations, the custom `custom_sso_security_manager.py` didn't import the module `logging`
+
+```python
+from superset.security import SupersetSecurityManager
+import logging
+
+class CustomSsoSecurityManager(SupersetSecurityManager):
+
+    def oauth_user_info(self, provider, response=None):
+        logging.debug("Oauth2 provider: {0}.".format(provider))
+        if provider == 'originsSSO':
+            # As example, this line request a GET to base_url + '/' + userDetails with Bearer  Authentication,
+            # and expects that authorization server checks the token, and response with user details
+            me = self.appbuilder.sm.oauth_remotes[provider].get('userDetails').data
+            logging.debug("user_data: {0}".format(me))
+            return { 'name' : me['name'], 'email' : me['email'], 'id' : me['user_name'], 'username' : me['user_name'], 'first_name':'', 'last_name':''}
+```
  
 
 
@@ -74,9 +90,9 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MjE2OTE0MCwxNzE2ODE1NTUzLDE1Mj
-k2OTYwODEsMzk2MjUwOTk5LDE4NjE4NzcxNjksLTE2NTE2NzMy
-NDIsMTUwODY0ODU5NywtMTMxMDkxMDI1MywxODU0NzkwNjU4LC
-05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgy
-NTM1MjJdfQ==
+eyJoaXN0b3J5IjpbNjEyNTQ2MTM3LDE3MTY4MTU1NTMsMTUyOT
+Y5NjA4MSwzOTYyNTA5OTksMTg2MTg3NzE2OSwtMTY1MTY3MzI0
+MiwxNTA4NjQ4NTk3LC0xMzEwOTEwMjUzLDE4NTQ3OTA2NTgsLT
+kwMDQwMDQ3NCwtMjM2OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1
+MzUyMl19
 -->
