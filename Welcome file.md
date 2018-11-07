@@ -197,7 +197,7 @@ It is intended in this use case, by default to select `originsSSO` as the OAuth2
 The problem with custom icon for OAuth2 is that `Flask` framework relies on **Font Awesome** type of icon when adding view (through the function `add_view()`). It is difficult to hijack this process as superset is build on top of the flask framework and that function is buried too deep to be able to easily overwrite.
 
 ## Redirecting logout superset to logout screen on Origin (AquilaOne)
-All the processes and methods invoked in login page, authentication page, and log out page are handled by `class AuthView(BaseView)` which is in [flask_appbuilder/security/view.py](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/security/views.py)
+All the processes and methods invoked in login page, authentication page, and log out page are handled by `class AuthView(BaseView)` which is defined in [flask_appbuilder/security/view.py](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/security/views.py)
 In the class, they defined **login** and **logout** process. What we want here is to overwrite the **logout** process so that they redirect user to AquilaOne logout page (http://poseidon:8896/sec/logout) instead of the superset index page. To do so, we can make use of the fact that superset consume **Blueprints** during initialization, and **blueprints** can be specified and passed to the initializer in the [config file](https://github.com/apache/incubator-superset/blob/master/superset/config.py#LC404).
 
 The blueprint can be created by following this particular [tutorial](http://flask.pocoo.org/docs/1.0/tutorial/views/#logout). The goal here is to define our own custom **logout** function and then route the path ('/logout/') to our custom **logout** view. This can be specified by using the decorator.
@@ -234,7 +234,7 @@ Now if everything is done correctly, pressing the `logout` button on superset we
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTc3MjQ4ODUsLTcwMTg1MTU2NiwtMT
+eyJoaXN0b3J5IjpbLTE1OTk3MDE0NzAsLTcwMTg1MTU2NiwtMT
 kwMjA2NjE1Myw2MTI1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2
 MDgxLDM5NjI1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLD
 E1MDg2NDg1OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAw
