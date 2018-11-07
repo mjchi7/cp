@@ -189,7 +189,10 @@ It is intended in this use case, by default to select `originsSSO` as the OAuth2
 4. Create a folder named `security`
 5. Inside of this `security` folder, paste the copied `login_oauth.html` file
 6. Edit this `login_oauth.html` file so that the function 
-`set_oid(url=/login/originsSSO, pr='originsSSO');` is called 
+```javascript
+set_oid(url=/login/originsSSO, pr='originsSSO'); 
+```
+is called right after the page is loaded.
 
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
@@ -197,7 +200,7 @@ It is intended in this use case, by default to select `originsSSO` as the OAuth2
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMTk1MDU5NSwtMTkwMjA2NjE1Myw2MT
+eyJoaXN0b3J5IjpbLTg1NDQyMjg1NywtMTkwMjA2NjE1Myw2MT
 I1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2MDgxLDM5NjI1MDk5
 OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLDE1MDg2NDg1OTcsLT
 EzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAwNDAwNDc0LC0yMzY5
