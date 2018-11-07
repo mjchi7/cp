@@ -178,7 +178,7 @@ def auth_user_oauth(self, userinfo):
         return user
 ``` 
 
-Notice how in the flow, we first check if the 
+Notice how in the flow, we first check if the user's [`groups`] contains either the element in `('SA', 'SSA')` or not. If yes, we specify the `role` as `'Admin'`.
 
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
@@ -186,9 +186,9 @@ Notice how in the flow, we first check if the
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNTEzOTI1LDYxMjU0NjEzNywxNzE2OD
-E1NTUzLDE1Mjk2OTYwODEsMzk2MjUwOTk5LDE4NjE4NzcxNjks
-LTE2NTE2NzMyNDIsMTUwODY0ODU5NywtMTMxMDkxMDI1MywxOD
-U0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3
-NDQ4LC05MDgyNTM1MjJdfQ==
+eyJoaXN0b3J5IjpbLTE5MDIwNjYxNTMsNjEyNTQ2MTM3LDE3MT
+Y4MTU1NTMsMTUyOTY5NjA4MSwzOTYyNTA5OTksMTg2MTg3NzE2
+OSwtMTY1MTY3MzI0MiwxNTA4NjQ4NTk3LC0xMzEwOTEwMjUzLD
+E4NTQ3OTA2NTgsLTkwMDQwMDQ3NCwtMjM2OTg5ODk1LDIxMTY4
+MTc0NDgsLTkwODI1MzUyMl19
 -->
