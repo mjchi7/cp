@@ -200,7 +200,12 @@ The problem with custom icon for OAuth2 is that `Flask` framework relies on **Fo
 All the login page, authentication page, and log out page are handled by `class AuthView(BaseView)` which is in [flask_appbuilder/security/view.py](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/security/views.py)
 In the class, they defined **login** and **logout** process. What we want here is to overwrite the **logout** process so that they redirect user to AquilaOne logout page (http://poseidon:8896/sec/logout) instead of the superset index page. To do so, we can make use of the fact that superset consume **Blueprints** during initialization, and **blueprints** can be specified and passed to the initializer in the [config file](https://github.com/apache/incubator-superset/blob/master/superset/config.py#LC404).
 
+The blueprint can be created by following this particular [tutorial](http://flask.pocoo.org/docs/1.0/tutorial/views/#logout). The goal here is to define our own custom **logout** function and then route the path ('/logout/') to our custom **logout** view. This can be specified by using the decorator.
+```python
+@app.route('/logout/')
+```
 
+In the `superset_config
 
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
@@ -208,10 +213,10 @@ In the class, they defined **login** and **logout** process. What we want here i
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzI0Mzk2MjAsLTcwMTg1MTU2NiwtMT
-kwMjA2NjE1Myw2MTI1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2
-MDgxLDM5NjI1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLD
-E1MDg2NDg1OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAw
-NDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNT
-IyXX0=
+eyJoaXN0b3J5IjpbLTQ5NzQwNTU5MSwtNzAxODUxNTY2LC0xOT
+AyMDY2MTUzLDYxMjU0NjEzNywxNzE2ODE1NTUzLDE1Mjk2OTYw
+ODEsMzk2MjUwOTk5LDE4NjE4NzcxNjksLTE2NTE2NzMyNDIsMT
+UwODY0ODU5NywtMTMxMDkxMDI1MywxODU0NzkwNjU4LC05MDA0
+MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1Mj
+JdfQ==
 -->
