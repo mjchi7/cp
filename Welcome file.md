@@ -193,6 +193,9 @@ It is intended in this use case, by default to select `originsSSO` as the OAuth2
 	set_openid(url='/login/originsSSO', pr='originsSSO'); 
 	```
 
+## Custom icon for OAuth2
+The problem with custom icon for OAuth2 is that `Flask` framework relies on **Font Awesome** type of icon when adding view (through the function `add_view()`). It is difficult to hijack this process as superset is build on top of the flask framework and that function is buried too deep to be able to easily overwrite.
+
 
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
@@ -200,7 +203,7 @@ It is intended in this use case, by default to select `originsSSO` as the OAuth2
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDEyOTA5NSwtMTkwMjA2NjE1Myw2MT
+eyJoaXN0b3J5IjpbLTcwMTg1MTU2NiwtMTkwMjA2NjE1Myw2MT
 I1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2MDgxLDM5NjI1MDk5
 OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLDE1MDg2NDg1OTcsLT
 EzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAwNDAwNDc0LC0yMzY5
