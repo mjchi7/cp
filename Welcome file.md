@@ -205,7 +205,19 @@ The blueprint can be created by following this particular [tutorial](http://flas
 @app.route('/logout/')
 ```
 
-After we define our own custom **logout** view with this new blueprint, we save the file under the name `auth.py` which shall then be placed in the same folder as the original config file `superset_config.py`.
+After we define our own custom **logout** view with this new blueprint, we save the file under the name `auth.py` which shall then be placed in the same folder as the original config file `superset_config.py`. In the end our `auth.py` file should look like this:
+
+```python
+from flask_login import logout_user, login_user
+from flask import Blueprint, redirect
+
+bp = Blueprint('auth', __name__, url_prefix='')
+
+@bp.route('/logout/')
+def logout():
+    logout_user()
+    return redirect('http://poseidon:8896/sec/logout')
+```
 
 In the `superset_config.py`, we import the `blueprint` defined in `auth.py`, and then subsequently pass it into the parameters as the following:
 ```python
@@ -214,16 +226,18 @@ from auth import bp
 BLUEPRINTS = [bp]
 ``` 
 
+Now if everything is done correctly, pressing the `logout` button on superset website will invoke this custom logout procedure, which will then redirect us to origin's logout page.
+
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
 2. At the OAuth2 provider side, admin needs to register the superset application's port number at AITSP so that user can be redirected after they have successfully identify themselves.
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU0NzUxOTEsLTcwMTg1MTU2NiwtMTkwMj
-A2NjE1Myw2MTI1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2MDgx
-LDM5NjI1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLDE1MD
-g2NDg1OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAwNDAw
-NDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX
-0=
+eyJoaXN0b3J5IjpbMTEyODI1ODUxOCwtNzAxODUxNTY2LC0xOT
+AyMDY2MTUzLDYxMjU0NjEzNywxNzE2ODE1NTUzLDE1Mjk2OTYw
+ODEsMzk2MjUwOTk5LDE4NjE4NzcxNjksLTE2NTE2NzMyNDIsMT
+UwODY0ODU5NywtMTMxMDkxMDI1MywxODU0NzkwNjU4LC05MDA0
+MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1Mj
+JdfQ==
 -->
