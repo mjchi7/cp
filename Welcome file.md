@@ -86,9 +86,48 @@ class CustomSsoSecurityManager(SupersetSecurityManager):
 ## Controlling Access Group
 To control which OAuth2-authenticated user have Admin privilege, Alpha privilege, Gamma privilege, and etc. In the `CustomSsoSecurityManager` class, overwrite the function `auth_user_oauth`. For our use case, we would like to check if the user's belong to either *'SA'* or *'SSA'*, if yes they should be granted Admin access. 
 
-ORIGINAL
+**ORIGINAL**
 
-MODIFIE
+```python
+def auth_user_oauth(self, userinfo):
+        logging.debug('Using custom "auth_user_oauth".')
+        """
+            OAuth user Authentication
+
+            :userinfo: dict with user information the keys have the same name
+            as User model columns.
+        """
+        if 'username' in userinfo:
+            user = self.find_user(username=userinfo['username'])
+        elif 'email' in userinfo:
+            user = self.find_user(email=userinfo['email'])
+        else:
+            log.error('User info does not have username or email {0}'.format(userinfo))
+            return None
+        # User is disabled
+        if user and not user.is_active:
+            log.info(LOGMSG_WAR_SEC_LOGIN_FAILED.format(userinfo))
+            return None
+        # If user does not exist on the DB and not self user registration, go away
+        if not user and not self.auth_user_registration:
+            return None
+        # User does not exist, create one if self registration.
+        if not user:
+            user = self.add_user(
+                    username=userinfo['username'],
+                    first_name=userinfo['first_name'],
+                    last_name=userinfo['last_name'],
+                    email=userinfo['email'],
+                    role=self.find_role(self.auth_user_registration_role)
+                )
+            if not user:
+                log.error("Error creating a new OAuth user %s" % userinfo['username'])
+                return None
+        self.update_user_auth_stat(user)
+        return user
+``` 
+
+**MODIFIED**
 
 ```python
 def auth_user_oauth(self, userinfo):
@@ -139,6 +178,7 @@ def auth_user_oauth(self, userinfo):
         return user
 ``` 
 
+Notice how in the flow, we first check if the 
 
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
@@ -146,7 +186,7 @@ def auth_user_oauth(self, userinfo):
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ1NDYwNTIyLDYxMjU0NjEzNywxNzE2OD
+eyJoaXN0b3J5IjpbMTgxNTEzOTI1LDYxMjU0NjEzNywxNzE2OD
 E1NTUzLDE1Mjk2OTYwODEsMzk2MjUwOTk5LDE4NjE4NzcxNjks
 LTE2NTE2NzMyNDIsMTUwODY0ODU5NywtMTMxMDkxMDI1MywxOD
 U0NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3
