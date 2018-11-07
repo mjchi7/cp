@@ -218,7 +218,8 @@ bp = Blueprint('auth', __name__, url_prefix='')
 
 @bp.route('/logout/')
 def logout():
-    logout_user()
+    logout_user() # We want to call the same method as called by original 
+				    #implementation in order to not mess up things
     return redirect('http://poseidon:8896/sec/logout')
 ```
 
@@ -237,10 +238,10 @@ Now if everything is done correctly, pressing the `logout` button on superset we
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNzQxNDk1MSwtNzAxODUxNTY2LC0xOT
-AyMDY2MTUzLDYxMjU0NjEzNywxNzE2ODE1NTUzLDE1Mjk2OTYw
-ODEsMzk2MjUwOTk5LDE4NjE4NzcxNjksLTE2NTE2NzMyNDIsMT
-UwODY0ODU5NywtMTMxMDkxMDI1MywxODU0NzkwNjU4LC05MDA0
-MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3NDQ4LC05MDgyNTM1Mj
-JdfQ==
+eyJoaXN0b3J5IjpbLTE4MDk4MjI0MjAsLTcwMTg1MTU2NiwtMT
+kwMjA2NjE1Myw2MTI1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2
+MDgxLDM5NjI1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLD
+E1MDg2NDg1OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAw
+NDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNT
+IyXX0=
 -->
