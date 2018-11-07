@@ -181,7 +181,7 @@ def auth_user_oauth(self, userinfo):
 Notice how in the flow, we first check if the user's [`groups`] contains either the element in `('SA', 'SSA')` or not. If yes, we specify the `role` as `'Admin'`.
 
 ## Default OAuth2 provider 
-It is intended in this use case, by default to select `originsSSO` as the OAuth2 channel. This can be achieved by taking the following steps:
+It is intended in this use case, by default to select `originsSSO` as the OAuth2 provider. This can be achieved by taking the following steps:
 1. Firstly, head to `.virtualenvs/superset/lib/site-packages/flask_appbuilder/templates/appbuilder/general/security`, inside of which you can locate the file `login_oauth.html`. Copy the file.
  
 2. Go to the directory `superset` has been installed. (in this case, it will be in `.virtualenvs/superset/lib/site-packages/superset`.)
@@ -200,9 +200,9 @@ It is intended in this use case, by default to select `originsSSO` as the OAuth2
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTAzMDk0NjMsLTE5MDIwNjYxNTMsNj
-EyNTQ2MTM3LDE3MTY4MTU1NTMsMTUyOTY5NjA4MSwzOTYyNTA5
-OTksMTg2MTg3NzE2OSwtMTY1MTY3MzI0MiwxNTA4NjQ4NTk3LC
-0xMzEwOTEwMjUzLDE4NTQ3OTA2NTgsLTkwMDQwMDQ3NCwtMjM2
-OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1MzUyMl19
+eyJoaXN0b3J5IjpbLTE2MDEyOTA5NSwtMTkwMjA2NjE1Myw2MT
+I1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2MDgxLDM5NjI1MDk5
+OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLDE1MDg2NDg1OTcsLT
+EzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAwNDAwNDc0LC0yMzY5
+ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX0=
 -->
