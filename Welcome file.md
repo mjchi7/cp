@@ -83,6 +83,9 @@ class CustomSsoSecurityManager(SupersetSecurityManager):
 ```
  
 
+## Controlling Access Group
+To control which OAuth2-authenticated user have Admin privilege, Alpha privilege, Gamma privilege, and etc. In the `CustomSsoSecurityManager` class, overwrite the function  
+
 
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
@@ -90,9 +93,9 @@ class CustomSsoSecurityManager(SupersetSecurityManager):
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEyNTQ2MTM3LDE3MTY4MTU1NTMsMTUyOT
-Y5NjA4MSwzOTYyNTA5OTksMTg2MTg3NzE2OSwtMTY1MTY3MzI0
-MiwxNTA4NjQ4NTk3LC0xMzEwOTEwMjUzLDE4NTQ3OTA2NTgsLT
-kwMDQwMDQ3NCwtMjM2OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1
-MzUyMl19
+eyJoaXN0b3J5IjpbMTQ3ODMwMzY5NSw2MTI1NDYxMzcsMTcxNj
+gxNTU1MywxNTI5Njk2MDgxLDM5NjI1MDk5OSwxODYxODc3MTY5
+LC0xNjUxNjczMjQyLDE1MDg2NDg1OTcsLTEzMTA5MTAyNTMsMT
+g1NDc5MDY1OCwtOTAwNDAwNDc0LC0yMzY5ODk4OTUsMjExNjgx
+NzQ0OCwtOTA4MjUzNTIyXX0=
 -->
