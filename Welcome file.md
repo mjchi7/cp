@@ -180,15 +180,19 @@ def auth_user_oauth(self, userinfo):
 
 Notice how in the flow, we first check if the user's [`groups`] contains either the element in `('SA', 'SSA')` or not. If yes, we specify the `role` as `'Admin'`.
 
+## Default OAuth2 provider 
+It is intended in this use case, by default to select `originsSSO` as the OAuth2 channel. This can be achieved by taking the following steps:
+1. Go to the directory `superset` has been installed. (in this case, it will be in .virtualenvs/lib64/
+
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
 2. At the OAuth2 provider side, admin needs to register the superset application's port number at AITSP so that user can be redirected after they have successfully identify themselves.
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDIwNjYxNTMsNjEyNTQ2MTM3LDE3MT
-Y4MTU1NTMsMTUyOTY5NjA4MSwzOTYyNTA5OTksMTg2MTg3NzE2
-OSwtMTY1MTY3MzI0MiwxNTA4NjQ4NTk3LC0xMzEwOTEwMjUzLD
-E4NTQ3OTA2NTgsLTkwMDQwMDQ3NCwtMjM2OTg5ODk1LDIxMTY4
-MTc0NDgsLTkwODI1MzUyMl19
+eyJoaXN0b3J5IjpbLTEwOTgyNjkwNzMsLTE5MDIwNjYxNTMsNj
+EyNTQ2MTM3LDE3MTY4MTU1NTMsMTUyOTY5NjA4MSwzOTYyNTA5
+OTksMTg2MTg3NzE2OSwtMTY1MTY3MzI0MiwxNTA4NjQ4NTk3LC
+0xMzEwOTEwMjUzLDE4NTQ3OTA2NTgsLTkwMDQwMDQ3NCwtMjM2
+OTg5ODk1LDIxMTY4MTc0NDgsLTkwODI1MzUyMl19
 -->
