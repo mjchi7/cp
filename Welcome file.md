@@ -209,7 +209,9 @@ After we define our own custom **logout** view with this new blueprint, we save 
 
 In the `superset_config.py`, we import the `blueprint` defined in `auth.py`, and then subsequently pass it into the parameters as the following:
 ```python
+from auth import bp
 
+BLUEPRINTS = [bp]
 ``` 
 
 # 4. Unsolved issues
@@ -218,10 +220,10 @@ In the `superset_config.py`, we import the `blueprint` defined in `auth.py`, and
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDU1NTM1OTcsLTcwMTg1MTU2NiwtMT
-kwMjA2NjE1Myw2MTI1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2
-MDgxLDM5NjI1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLD
-E1MDg2NDg1OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAw
-NDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNT
-IyXX0=
+eyJoaXN0b3J5IjpbMjU0NzUxOTEsLTcwMTg1MTU2NiwtMTkwMj
+A2NjE1Myw2MTI1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2MDgx
+LDM5NjI1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLDE1MD
+g2NDg1OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAwNDAw
+NDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNTIyXX
+0=
 -->
