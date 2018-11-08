@@ -53,7 +53,10 @@ To add more user, follow the steps below:
 2. Log into the database
 	`sudo -u postgres psql`
 3. To see the list of users, issue the command `\du`. From the list you should be able to see there are currently two users: `postgres` and `redash` (the one we created in step 1. 
-4. 
+4. Assign `CREATEDB` role to user `redash` with the following query
+	`ALTER USER redash WITH SUPERUSER,CREATEDB`
+	When the query execute, user `redash` will have superuser access to the database (Which is needed to set up redash)
+5. Issue `\q` to quit the `psql` environment.
 
 ## Installting ReDASH
 
@@ -83,5 +86,5 @@ When this issue shows up, it means the `redis` server is not installed and/or no
 ### 2. sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server: No such file or directory. Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"? 
 When this issue shows up, it means the `PostgreSQL` server is not installed and/or not running. Refers to **Preliminaries** step in this document to see how to set up properly.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMTY5NzA0NywtMTA2NTM2OTcxMF19
+eyJoaXN0b3J5IjpbMTk5MDk0NTU5MywtMTA2NTM2OTcxMF19
 -->
