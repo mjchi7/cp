@@ -78,7 +78,7 @@ RUNNING THE SERVICES
 2. Celery:  `./bin/run celery worker --app=redash.worker --beat -Qscheduled_queries,queries,celery -c2`
 3. Webpack dev server:  `npm run start`
 
-To start Web server at '0.0.0.0', simply add the `--host` command line argument as shown below
+To start Web server at `'0.0.0.0'`, simply add the `--host` command line argument as shown below
 `bin/run ./manage.py runserver --debugger --reload --host 0.0.0.0`
 
 ## Issues
@@ -88,5 +88,5 @@ When this issue shows up, it means the `redis` server is not installed and/or no
 ### 2. sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server: No such file or directory. Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"? 
 When this issue shows up, it means the `PostgreSQL` server is not installed and/or not running. Refers to **Preliminaries** step in this document to see how to set up properly.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjYzODM0MywtMTA2NTM2OTcxMF19
+eyJoaXN0b3J5IjpbOTczMDQ2NTA1LC0xMDY1MzY5NzEwXX0=
 -->
