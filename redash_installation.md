@@ -47,6 +47,7 @@ systemctl start postgresql-11
 After PostgreSQL has been installed, there will be only 1 default user which can access the database: `postgres`
 
 To add more user, follow the steps below:
+
 1. To access the database with your current local user name, you need to add it into the database by issuing the following command
 	`sudo -u postgres createuser redash`
 	The command will create a user `redash` (so that user log into the server with username `redash` can use the database server, which is needed for redash setup stage).
@@ -57,6 +58,7 @@ To add more user, follow the steps below:
 	`ALTER USER redash WITH SUPERUSER,CREATEDB`
 	When the query execute, user `redash` will have superuser access to the database (Which is needed to set up redash)
 5. Issue `\q` to quit the `psql` environment.
+
 
 ## Installting ReDASH
 
@@ -86,5 +88,5 @@ When this issue shows up, it means the `redis` server is not installed and/or no
 ### 2. sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server: No such file or directory. Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"? 
 When this issue shows up, it means the `PostgreSQL` server is not installed and/or not running. Refers to **Preliminaries** step in this document to see how to set up properly.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MDk0NTU5MywtMTA2NTM2OTcxMF19
+eyJoaXN0b3J5IjpbLTE1NjYzODM0MywtMTA2NTM2OTcxMF19
 -->
