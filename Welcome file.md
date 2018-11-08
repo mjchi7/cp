@@ -232,16 +232,19 @@ BLUEPRINTS = [bp]
 
 Now if everything is done correctly, pressing the `logout` button on superset website will invoke this custom logout procedure, which will then redirect us to origin's logout page.
 
+## Removing "register" button on login page.
+Do not attempt to set `AUTH_USER_REGISTRATION` as `False`. This will make user which has access to AquilaOne, but hasn't log in before unable to log in. Because when setting the parameter to `False`, we are essentially blocking 
+
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
 2. At the OAuth2 provider side, admin needs to register the superset application's port number at AITSP so that user can be redirected after they have successfully identify themselves.
 3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDk4MjI0MjAsLTcwMTg1MTU2NiwtMT
-kwMjA2NjE1Myw2MTI1NDYxMzcsMTcxNjgxNTU1MywxNTI5Njk2
-MDgxLDM5NjI1MDk5OSwxODYxODc3MTY5LC0xNjUxNjczMjQyLD
-E1MDg2NDg1OTcsLTEzMTA5MTAyNTMsMTg1NDc5MDY1OCwtOTAw
-NDAwNDc0LC0yMzY5ODk4OTUsMjExNjgxNzQ0OCwtOTA4MjUzNT
-IyXX0=
+eyJoaXN0b3J5IjpbMTMzMTYxMDAzNSwtMTgwOTgyMjQyMCwtNz
+AxODUxNTY2LC0xOTAyMDY2MTUzLDYxMjU0NjEzNywxNzE2ODE1
+NTUzLDE1Mjk2OTYwODEsMzk2MjUwOTk5LDE4NjE4NzcxNjksLT
+E2NTE2NzMyNDIsMTUwODY0ODU5NywtMTMxMDkxMDI1MywxODU0
+NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3ND
+Q4LC05MDgyNTM1MjJdfQ==
 -->
