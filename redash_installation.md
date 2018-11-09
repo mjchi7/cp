@@ -59,7 +59,7 @@ To add more user, follow the steps below:
 	`sudo -u postgres psql`
 	
 3. To see the list of users, issue the command `\du`. From the list you should be able to see there are currently two users: `postgres` and `redash` (the one we created in step 1. 
-4. 
+
 5. Assign `CREATEDB` role to user `redash` with the following query
 	`ALTER USER redash WITH SUPERUSER,CREATEDB`
 	When the query execute, user `redash` will have superuser access to the database (Which is needed to set up redash)
@@ -123,6 +123,6 @@ yum install openssl-devel
 ### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; cannot find -lcrypto;. 
 This issue is similar to issue 4, which means the dependencies **openssl-devel** is not installed. [Relevant read](https://stackoverflow.com/questions/25979525/cannot-find-lssl-cannot-find-lcrypto-when-installing-mysql-python-using-mar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTM1MzI0MCwzMjcwNDU3ODYsOTczMD
-Q2NTA1LC0xMDY1MzY5NzEwXX0=
+eyJoaXN0b3J5IjpbLTM3Nzc4NzIzNiwxMTM1MzUzMjQwLDMyNz
+A0NTc4Niw5NzMwNDY1MDUsLTEwNjUzNjk3MTBdfQ==
 -->
