@@ -94,13 +94,16 @@ This happens if you didn't `pip install -r requirements_all_ds.txt`, which means
 To fix this, simply run the following command on the project folder that contains the forked redash
 `pip install -r requirements_all_ds.txt`
 
-### 4. When pip installing requirements_all_ds.txt, MySQL-Python failed to build!
+### 4. When pip installing *requirements_all_ds.txt*, MySQL-Python failed to build!
 In order for mysql to build successfully, make sure you have the following dependencies installed using your OS package manager (in CentOS, it is *yum*)
 
 ```
 yum install mariadb-devel
 yum install openssl-devel
+```
+
+### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE0NDgzOTU5LDk3MzA0NjUwNSwtMTA2NT
+eyJoaXN0b3J5IjpbNTEwNTcwNzA5LDk3MzA0NjUwNSwtMTA2NT
 M2OTcxMF19
 -->
