@@ -1,6 +1,8 @@
 ## Preliminaries
 Step by step tutorial : https://redash.io/help/open-source/dev-guide/setup
 ### Redis server
+
+#### Installation
 Firstly, install the [`redis`](https://linode.com/docs/databases/redis/install-and-configure-redis-on-centos-7/) server. If OS is CentOS, type the following command
 ```
 sudo yum install redis
@@ -11,7 +13,7 @@ Next, run the `redis` server using the following command
 sudo systemctl start redis
 ```
 
-(**OPTIONAL**) To start `redis` on boot
+(*OPTIONAL*) To start `redis` on boot
 ```
 sudo systemctl enable redis
 ```
@@ -23,6 +25,7 @@ redis-cli ping
 If the terminal output `PONG`, redis server is up and running.
 
 ### PostgreSQL
+#### Installation
 Installation steps depend heavily on your OS. In the steps below, commands showed are only applicable to CentOS7. For more information refers to [PostgreSQL Official Site](https://www.postgresql.org/download/linux/redhat/)
 
 Firstly, install the repository so that the package is visible to our `yum` package manager
@@ -43,7 +46,7 @@ systemctl enable postgresql-11
 systemctl start postgresql-11
 ```
 
-## Configuring PostgreSQL 
+#### Configuration
 After PostgreSQL has been installed, there will be only 1 default user which can access the database: `postgres`
 
 To add more user, follow the steps below:
@@ -60,10 +63,12 @@ To add more user, follow the steps below:
 5. Issue `\q` to quit the `psql` environment.
 
 
+
 ## Installting ReDASH
 
 1. FOLLOWS STEPS
  https://redash.io/help/open-source/dev-guide/setup
+** REMEMBER TO ADD IN THE STEP WHERE YOU PIP INSTALL REQUIREMENTS_ALL_DS.TXT **
 
 BLA
 
@@ -105,6 +110,6 @@ yum install openssl-devel
 ### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; cannot find -lcrypto;. 
 This issue is similar to issue 4, which means the dependencies **openssl-devel** is not installed. [Relevant read](https://stackoverflow.com/questions/25979525/cannot-find-lssl-cannot-find-lcrypto-when-installing-mysql-python-using-mar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3MDQ1Nzg2LDk3MzA0NjUwNSwtMTA2NT
-M2OTcxMF19
+eyJoaXN0b3J5IjpbMTI4MDg0NjUyNiwzMjcwNDU3ODYsOTczMD
+Q2NTA1LC0xMDY1MzY5NzEwXX0=
 -->
