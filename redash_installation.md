@@ -93,7 +93,9 @@ This happens if you didn't `pip install -r requirements_all_ds.txt`, which means
 
 To fix this, simply run the following command on the project folder that contains the forked redash
 `pip install -r requirements_all_ds.txt`
+
+### 4. When pip installing 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTU1MzkxMzUsOTczMDQ2NTA1LC0xMD
-Y1MzY5NzEwXX0=
+eyJoaXN0b3J5IjpbLTM4ODEwNDAyOCw5NzMwNDY1MDUsLTEwNj
+UzNjk3MTBdfQ==
 -->
