@@ -72,7 +72,10 @@ If you intend to use MySQL as one of your data source, several system level depe
 
 Install the packages `openssl-devel` and `mariadb-devel` using root user 
 
-`sudo yu
+```
+sudo yum install openssl-devel
+sudo yum install mariadb-devel
+```
  
 ## Installting ReDASH
 
@@ -110,7 +113,7 @@ To fix this, simply run the following command on the project folder that contain
 `pip install -r requirements_all_ds.txt`
 
 ### 4. When pip installing *requirements_all_ds.txt*, MySQL-Python failed to build!
-In order for mysql to build successfully, make sure you have the following dependencies installed using your OS package manager (in CentOS, it is *yum*)
+In order for mysql to build successfully, make sure you have the following dependencies installed using your OS package manager (in CentOS, it is *yum*). Refers to **Preliminaries** -> **MySQL-Dependencies** -> **Installation**
 
 ```
 yum install mariadb-devel
@@ -120,6 +123,6 @@ yum install openssl-devel
 ### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; cannot find -lcrypto;. 
 This issue is similar to issue 4, which means the dependencies **openssl-devel** is not installed. [Relevant read](https://stackoverflow.com/questions/25979525/cannot-find-lssl-cannot-find-lcrypto-when-installing-mysql-python-using-mar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODU5NDA2NzksMzI3MDQ1Nzg2LDk3Mz
-A0NjUwNSwtMTA2NTM2OTcxMF19
+eyJoaXN0b3J5IjpbMTEzNTM1MzI0MCwzMjcwNDU3ODYsOTczMD
+Q2NTA1LC0xMDY1MzY5NzEwXX0=
 -->
