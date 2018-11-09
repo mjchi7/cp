@@ -122,7 +122,11 @@ yum install openssl-devel
 
 ### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; cannot find -lcrypto;. 
 This issue is similar to issue 4, which means the dependencies **openssl-devel** is not installed. [Relevant read](https://stackoverflow.com/questions/25979525/cannot-find-lssl-cannot-find-lcrypto-when-installing-mysql-python-using-mar)
+
+### 6. When making a queries, "NoneType' object has no attribute 'annotate_query'" error comes up
+To solve, simply restart the 3 processes (webserver, celery, webpack)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3Nzc4NzIzNiwxMTM1MzUzMjQwLDMyNz
-A0NTc4Niw5NzMwNDY1MDUsLTEwNjUzNjk3MTBdfQ==
+eyJoaXN0b3J5IjpbLTE5OTYwMzA4ODIsLTM3Nzc4NzIzNiwxMT
+M1MzUzMjQwLDMyNzA0NTc4Niw5NzMwNDY1MDUsLTEwNjUzNjk3
+MTBdfQ==
 -->
