@@ -102,8 +102,9 @@ yum install mariadb-devel
 yum install openssl-devel
 ```
 
-### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; 
+### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; cannot find -lcrypto;. 
+This issue is similar to issue 4, which means the dependencies **openssl-devel** is not installed. [Relevant read](https://stackoverflow.com/questions/25979525/cannot-find-lssl-cannot-find-lcrypto-when-installing-mysql-python-using-mar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEwNTcwNzA5LDk3MzA0NjUwNSwtMTA2NT
+eyJoaXN0b3J5IjpbMzI3MDQ1Nzg2LDk3MzA0NjUwNSwtMTA2NT
 M2OTcxMF19
 -->
