@@ -89,8 +89,11 @@ When this issue shows up, it means the `redis` server is not installed and/or no
 When this issue shows up, it means the `PostgreSQL` server is not installed and/or not running. Refers to **Preliminaries** step in this document to see how to set up properly.
 
 ### 3. Redash claims that they support 25 data sources, but I can only see some of them! 
-This happens if you didn't `pip install -r requirements_ds_all
+This happens if you didn't `pip install -r requirements_all_ds.txt`, which means all the needed database dependencies weren't installed, hence you can't see all the data source interface when you try to add new data source.
+
+To fix this, simply run the following command on the project folder that contains the forked redash
+`pip install -r requirements_all_ds.txt`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA4NDM2NjYxLDk3MzA0NjUwNSwtMTA2NT
-M2OTcxMF19
+eyJoaXN0b3J5IjpbLTE5MTU1MzkxMzUsOTczMDQ2NTA1LC0xMD
+Y1MzY5NzEwXX0=
 -->
