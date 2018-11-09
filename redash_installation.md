@@ -54,15 +54,22 @@ To add more user, follow the steps below:
 1. To access the database with your current local user name, you need to add it into the database by issuing the following command
 	`sudo -u postgres createuser redash`
 	The command will create a user `redash` (so that user log into the server with username `redash` can use the database server, which is needed for redash setup stage).
+	
 2. Log into the database
 	`sudo -u postgres psql`
+	
 3. To see the list of users, issue the command `\du`. From the list you should be able to see there are currently two users: `postgres` and `redash` (the one we created in step 1. 
-4. Assign `CREATEDB` role to user `redash` with the following query
+4. 
+5. Assign `CREATEDB` role to user `redash` with the following query
 	`ALTER USER redash WITH SUPERUSER,CREATEDB`
 	When the query execute, user `redash` will have superuser access to the database (Which is needed to set up redash)
-5. Issue `\q` to quit the `psql` environment.
+	
+6. Issue `\q` to quit the `psql` environment.
 
-
+### MySQL 
+If you intend to use MySQL as one of your data source, dependencies must be installed in order to make sure the following installation can be done without problem.
+#### Installation
+##### Dependencies 
 
 ## Installting ReDASH
 
@@ -110,6 +117,6 @@ yum install openssl-devel
 ### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; cannot find -lcrypto;. 
 This issue is similar to issue 4, which means the dependencies **openssl-devel** is not installed. [Relevant read](https://stackoverflow.com/questions/25979525/cannot-find-lssl-cannot-find-lcrypto-when-installing-mysql-python-using-mar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MDg0NjUyNiwzMjcwNDU3ODYsOTczMD
+eyJoaXN0b3J5IjpbMTI3NjQ1NjI1NiwzMjcwNDU3ODYsOTczMD
 Q2NTA1LC0xMDY1MzY5NzEwXX0=
 -->
