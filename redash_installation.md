@@ -66,11 +66,14 @@ To add more user, follow the steps below:
 	
 6. Issue `\q` to quit the `psql` environment.
 
-### MySQL 
-If you intend to use MySQL as one of your data source, dependencies must be installed in order to make sure the following installation can be done without problem.
+### MySQL-Python System-level Dependencies
+If you intend to use MySQL as one of your data source, several system level dependencies must be installed in order to make sure the following installation can be done without problem.
 #### Installation
-##### Dependencies 
 
+Install the packages `openssl-devel` and `mariadb-devel` using root user 
+
+`sudo yu
+ 
 ## Installting ReDASH
 
 1. FOLLOWS STEPS
@@ -117,6 +120,6 @@ yum install openssl-devel
 ### 5. When building MySQL-Python, it complains that I am lacking two packages: "cannot find -lssl; cannot find -lcrypto;. 
 This issue is similar to issue 4, which means the dependencies **openssl-devel** is not installed. [Relevant read](https://stackoverflow.com/questions/25979525/cannot-find-lssl-cannot-find-lcrypto-when-installing-mysql-python-using-mar)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NjQ1NjI1NiwzMjcwNDU3ODYsOTczMD
-Q2NTA1LC0xMDY1MzY5NzEwXX0=
+eyJoaXN0b3J5IjpbLTE2ODU5NDA2NzksMzI3MDQ1Nzg2LDk3Mz
+A0NjUwNSwtMTA2NTM2OTcxMF19
 -->
