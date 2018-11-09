@@ -87,6 +87,10 @@ When this issue shows up, it means the `redis` server is not installed and/or no
 
 ### 2. sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server: No such file or directory. Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"? 
 When this issue shows up, it means the `PostgreSQL` server is not installed and/or not running. Refers to **Preliminaries** step in this document to see how to set up properly.
+
+### 3. Redash claims that they support 25 data sources, but I can only see some of them! 
+This happens if you didn't `pip install -r requirements_ds_all
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTczMDQ2NTA1LC0xMDY1MzY5NzEwXX0=
+eyJoaXN0b3J5IjpbMzA4NDM2NjYxLDk3MzA0NjUwNSwtMTA2NT
+M2OTcxMF19
 -->
