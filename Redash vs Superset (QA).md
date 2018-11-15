@@ -94,6 +94,9 @@ WHERE USER_REGION IN
 The following query will select the `WHERE` condition based on the returned value of `current_user_region`. If it returns `Selangor`, query will select data with `USER_REGION == Selangor`, or else it will select data with `USER_REGION == 'PERAK' or 'PERLIS' or 'JOHOR'`
 
 For more information, refers [JINJA Page](http://jinja.pocoo.org/docs/2.10/templates/)
+
+BUTTTT CAN USER CHANGE QUERIES THOUGH??????
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAyNTg1ODI3LDYyMzIyNTYzOV19
+eyJoaXN0b3J5IjpbLTE2NDU1NDUzNjgsNDAyNTg1ODI3LDYyMz
+IyNTYzOV19
 -->
