@@ -321,13 +321,12 @@ function register() {
 # 4. Unsolved issues
 1. How do we enable two way of authentication? This issue is mainly the problem with `flask-appbuilder` since it doesn't allow two `AUTH_TYPE` [flask-appbuilder base configuration (see AUTH_TYPE)](https://flask-appbuilder.readthedocs.io/en/latest/config.html)
 2. At the OAuth2 provider side, admin needs to register the superset application's port number at AITSP so that user can be redirected after they have successfully identify themselves.
-3. OAuth2 provider side is prone to internal server error, which is as shown in the document below:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzOTAyMjQxMywtMTgwOTgyMjQyMCwtNz
-AxODUxNTY2LC0xOTAyMDY2MTUzLDYxMjU0NjEzNywxNzE2ODE1
-NTUzLDE1Mjk2OTYwODEsMzk2MjUwOTk5LDE4NjE4NzcxNjksLT
-E2NTE2NzMyNDIsMTUwODY0ODU5NywtMTMxMDkxMDI1MywxODU0
-NzkwNjU4LC05MDA0MDA0NzQsLTIzNjk4OTg5NSwyMTE2ODE3ND
-Q4LC05MDgyNTM1MjJdfQ==
+eyJoaXN0b3J5IjpbMTk4NzA2ODg1MCwxMjM5MDIyNDEzLC0xOD
+A5ODIyNDIwLC03MDE4NTE1NjYsLTE5MDIwNjYxNTMsNjEyNTQ2
+MTM3LDE3MTY4MTU1NTMsMTUyOTY5NjA4MSwzOTYyNTA5OTksMT
+g2MTg3NzE2OSwtMTY1MTY3MzI0MiwxNTA4NjQ4NTk3LC0xMzEw
+OTEwMjUzLDE4NTQ3OTA2NTgsLTkwMDQwMDQ3NCwtMjM2OTg5OD
+k1LDIxMTY4MTc0NDgsLTkwODI1MzUyMl19
 -->
